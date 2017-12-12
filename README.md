@@ -15,7 +15,7 @@ Key features :
 
 This is what **duka** looks like:
 
-![duka](.img/Screen Shot 2016-04-10 at 20.15.51.png)
+![duka](.img/2016-04-10@20.15.51.png)
 
 As you can see, **duka** estimates the time left until the download is completed. This is extremely useful when downloading a large data set. 
 

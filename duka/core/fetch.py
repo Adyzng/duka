@@ -9,7 +9,7 @@ import requests
 
 from ..core.utils import Logger, is_dst
 
-URL = "https://www.dukascopy.com/datafeed/{currency}/{year}/{month:02d}/{day:02d}/{hour:02d}h_ticks.bi5"
+URL = "https://datafeed.dukascopy.com/datafeed/{currency}/{year}/{month:02d}/{day:02d}/{hour:02d}h_ticks.bi5"
 ATTEMPTS = 5
 
 
@@ -35,7 +35,7 @@ async def get(url):
             Logger.warn("Request {0} failed with exception : {1}".format(id, str(e)))
             time.sleep(0.5 * i)
 
-    raise Exception("Request failed for {0} after ATTEMPTS attempts".format(url))
+    raise Exception("Request failed for {0} after {1} attempts".format(url, ATTEMPTS))
 
 
 def create_tasks(symbol, day):
